@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎂 生日快乐 - Happy Birthday</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600;700&family=ZCOOL+XiaoWei&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -21,7 +21,7 @@
         }
 
         body {
-            font-family: 'Noto Serif SC', 'Playfair Display', Georgia, serif;
+            font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', 'Playfair Display', Georgia, serif;
             overflow-x: hidden;
             min-height: 100vh;
             background: linear-gradient(-45deg, #ff9a9e, #fecfef, #fecfef, #ffecd2);
@@ -243,6 +243,111 @@
             font-style: italic;
             color: #ff6b9d;
             font-size: 1.2rem;
+        }
+
+        /* 诗词卡片 */
+        .poem-card {
+            background: linear-gradient(135deg, rgba(255, 245, 248, 0.98), rgba(255, 230, 210, 0.98));
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 50px;
+            margin: 40px auto;
+            max-width: 850px;
+            box-shadow: 
+                0 25px 70px rgba(196, 69, 105, 0.15),
+                0 0 0 2px rgba(255, 107, 157, 0.3) inset;
+            animation: fadeInUp 1s ease-out 0.7s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .poem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ffd93d, #ff6b9d, #c44569);
+            background-size: 200% 200%;
+            animation: gradientText 4s ease infinite;
+        }
+
+        .poem-decoration {
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.1;
+            color: #c44569;
+        }
+
+        .poem-decoration.left {
+            top: 10px;
+            left: 20px;
+        }
+
+        .poem-decoration.right {
+            bottom: 10px;
+            right: 20px;
+        }
+
+        .poem-title {
+            font-family: 'Ma Shan Zheng', cursive;
+            text-align: center;
+            font-size: 2.5rem;
+            color: #c44569;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .poem-content {
+            font-family: 'Ma Shan Zheng', 'Noto Serif SC', cursive;
+            font-size: 1.8rem;
+            line-height: 2.8;
+            color: #4a3f35;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .poem-part {
+            margin-bottom: 20px;
+        }
+
+        .poem-part:last-child {
+            margin-bottom: 0;
+        }
+
+        .poem-part-title {
+            font-size: 1.4rem;
+            color: #ff6b9d;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+        }
+
+        .poem-content p {
+            margin-bottom: 8px;
+            letter-spacing: 3px;
+        }
+
+        .poem-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .poem-divider {
+            color: #ff6b9d;
+            font-size: 1.2rem;
+            margin: 15px 0;
+            letter-spacing: 8px;
+            opacity: 0.6;
+        }
+
+        .poem-signature {
+            font-family: 'Ma Shan Zheng', cursive;
+            margin-top: 30px;
+            font-size: 1.3rem;
+            color: #c44569;
+            text-align: right;
+            font-style: normal;
         }
 
         .section-title {
@@ -585,24 +690,52 @@
     <div class="container">
         <div class="hero">
             <span class="birthday-cake">🎂</span>
-            <h1 class="main-title">生日快乐</h1>
+            <h1 class="main-title">鸡蛋黄，生日快乐！</h1>
             <p class="subtitle">Happy Birthday, My Love ✨</p>
         </div>
 
         <div class="message-card">
             <div class="message-content">
-                <p>亲爱的 <span class="highlight-name">宝贝</span>，</p>
-                <p>在这个属于你的特别日子里，</p>
-                <p>我想对你说，遇见你是我这辈子最幸运的事。</p>
-                <p>你的笑容像阳光一样温暖，</p>
-                <p>你的温柔像春风一样醉人。</p>
-                <p>愿新的一岁里，</p>
-                <p>所有的美好都如期而至，</p>
-                <p>所有的梦想都能实现，</p>
-                <p>而我会一直陪在你身边，</p>
-                <p>爱你，永远 💖</p>
-                <p class="signature">—— 永远爱你的我</p>
+                <p>亲爱的 <span class="highlight-name">静</span>，</p>
+                <p>今天是你 <span class="highlight-name">26</span> 岁的生日，</p>
+                <p>在这个特别的日子里，</p>
+                <p>我想对你说：</p>
+                <p>遇见你，是我这辈子最美好的幸运。</p>
+                <p>想对你说：</p>
+                <p>愿你在新的一岁里，</p>
+                <p>所有的美好都能如期而至，</p>
+                <p>所有的梦想都能绽放光彩。</p>
+                <p>想对你说：</p>
+                <p>愿你岁岁平安，万事胜意，</p>
+                <p>而我会永远陪在你身边，</p>
+                <p>爱你，直到永远 💖</p>
+                <p class="signature">—— 永远爱你的哥哥</p>
             </div>
+        </div>
+
+        <!-- 诗词卡片 -->
+        <div class="poem-card">
+            <span class="poem-decoration left">❀</span>
+            <span class="poem-decoration right">❀</span>
+            <h2 class="poem-title">🌸 行香子 · 玉静生辰寄 🌸</h2>
+            <div class="poem-content">
+                <div class="poem-part">
+                    <p class="poem-part-title">【上阕】</p>
+                    <p>桃始夭夭，恰是芳辰。</p>
+                    <p>算相逢、三百晨昏。</p>
+                    <p>嗔如急雨，笑若晴云。</p>
+                    <p>共一庭风，一窗月，一灯温。</p>
+                </div>
+                <div class="poem-divider">· · · · · · · · · ·</div>
+                <div class="poem-part">
+                    <p class="poem-part-title">【下阕】</p>
+                    <p>人间路远，悲喜交陈。</p>
+                    <p>愿从今、携手前尘。</p>
+                    <p>岁华安稳，眉目长新。</p>
+                    <p>对四时花，三餐暖，百年身。</p>
+                </div>
+            </div>
+            <p class="poem-signature">—— 我猜有笨蛋看不懂！</p>
         </div>
 
         <!-- 生日蛋糕蜡烛互动 -->
@@ -634,7 +767,7 @@
         </div>
 
         <div class="countdown-section">
-            <h3 class="countdown-title">🎁 距离下次生日（农历四月初八）还有</h3>
+            <h3 class="countdown-title">🎁 距离下次生日还有</h3>
             <p style="text-align: center; color: #c44569; margin-bottom: 20px; font-size: 1.1rem;" id="birthday-date"></p>
             <div class="countdown-timer">
                 <div class="time-unit">
@@ -657,7 +790,7 @@
         </div>
 
         <button class="magic-btn" onclick="burstHearts()">
-            💗 点击送你小心心
+            💗 点击送我（特指宋哥哥）小心心
         </button>
 
         <div class="footer">
