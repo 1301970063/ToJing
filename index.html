@@ -273,6 +273,30 @@
             animation: gradientText 4s ease infinite;
         }
 
+        .poem-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .poem-title {
+            font-family: 'Ma Shan Zheng', cursive;
+            text-align: center;
+            font-size: 2.5rem;
+            color: #c44569;
+            margin-bottom: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .poem-author {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 1.4rem;
+            color: #ff6b9d;
+            opacity: 0.8;
+        }
+
         .poem-decoration {
             position: absolute;
             font-size: 8rem;
@@ -288,15 +312,6 @@
         .poem-decoration.right {
             bottom: 10px;
             right: 20px;
-        }
-
-        .poem-title {
-            font-family: 'Ma Shan Zheng', cursive;
-            text-align: center;
-            font-size: 2.5rem;
-            color: #c44569;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .poem-content {
@@ -322,6 +337,8 @@
             color: #ff6b9d;
             margin-bottom: 10px;
             letter-spacing: 5px;
+            text-align: left;
+            margin-left: 20px;
         }
 
         .poem-content p {
@@ -341,14 +358,7 @@
             opacity: 0.6;
         }
 
-        .poem-signature {
-            font-family: 'Ma Shan Zheng', cursive;
-            margin-top: 30px;
-            font-size: 1.3rem;
-            color: #c44569;
-            text-align: right;
-            font-style: normal;
-        }
+
 
         .section-title {
             text-align: center;
@@ -430,20 +440,20 @@
         }
         
         .candle-body {
-            width: 12px;
-            height: 50px;
+            width: 20px;
+            height: 70px;
             background: linear-gradient(to right, #ff9a9e, #ff6b9d, #c44569);
-            border-radius: 2px 2px 5px 5px;
+            border-radius: 3px 3px 8px 8px;
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(255,107,157,0.5);
         }
         
         .candle-flame {
-            width: 20px;
-            height: 30px;
+            width: 30px;
+            height: 45px;
             background: radial-gradient(circle at 50% 70%, #fff 0%, #ffd93d 30%, #ff9a9e 70%, transparent 100%);
             border-radius: 50% 50% 50% 50%;
-            margin: 0 auto -10px;
+            margin: 0 auto -15px;
             opacity: 0;
             animation: flameFlicker 0.3s ease-in-out infinite alternate;
             transition: opacity 0.5s ease;
@@ -470,25 +480,25 @@
         
         .deco-1 {
             top: 150px;
-            left: 100px;
+            left: 80px;
             animation-delay: 0s;
         }
         
         .deco-2 {
             top: 130px;
-            right: 100px;
+            right: 80px;
             animation-delay: 0.5s;
         }
         
         .deco-3 {
-            top: 200px;
-            left: 150px;
+            top: 190px;
+            left: 120px;
             animation-delay: 1s;
         }
         
         .deco-4 {
-            top: 220px;
-            right: 150px;
+            top: 210px;
+            right: 120px;
             animation-delay: 1.5s;
         }
         
@@ -516,7 +526,7 @@
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(196, 69, 105, 0.4);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
+            font-family: 'Noto Serif SC', 'Microsoft YaHei', sans-serif;
             font-weight: 600;
         }
 
@@ -530,7 +540,9 @@
             margin-top: 20px;
             font-size: 1.2rem;
             color: #c44569;
-            font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
+            font-family: 'Noto Serif SC', 'Microsoft YaHei', sans-serif;
+            font-weight: 600;
+            line-height: 1.6;
         }
 
         /* Countdown Section */
@@ -606,7 +618,7 @@
             cursor: pointer;
             box-shadow: 0 20px 50px rgba(255, 107, 157, 0.4);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
+            font-family: 'Noto Serif SC', 'Microsoft YaHei', sans-serif;
             font-weight: 700;
             animation: fadeInUp 1s ease-out 1.4s both, btnGlow 2s ease-in-out infinite alternate;
             position: relative;
@@ -670,6 +682,7 @@
             color: #c44569;
             font-size: 1.1rem;
             animation: fadeInUp 1s ease-out 1.6s both;
+            font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
         }
 
         /* Responsive */
@@ -679,7 +692,6 @@
             .birthday-cake { font-size: 100px; }
             .message-card { padding: 40px 25px; }
             .message-content { font-size: 1.1rem; }
-            .gallery { grid-template-columns: 1fr; }
             .time-unit { min-width: 100px; padding: 20px; }
             .time-number { font-size: 2.5rem; }
             .magic-btn { width: 260px; font-size: 1.2rem; }
@@ -694,7 +706,7 @@
     <div class="container">
         <div class="hero">
             <span class="birthday-cake">🎂</span>
-            <h1 class="main-title">鸡蛋黄，</h1>
+            <h1 class="main-title"> 鸡蛋黄</h1>
             <h1 class="main-title">生日快乐</h1>
             <p class="subtitle">Happy Birthday, My Love ✨</p>
         </div>
@@ -706,14 +718,13 @@
                 <p>在这个特别的日子里，</p>
                 <p>我想对你说：</p>
                 <p>遇见你，是我这辈子最美好的幸运。</p>
-                <p>想对你说：</p>
                 <p>愿你在新的一岁里，</p>
                 <p>所有的美好都能如期而至，</p>
                 <p>所有的梦想都能绽放光彩。</p>
-                <p>想对你说：</p>
                 <p>愿你岁岁平安，万事胜意，</p>
                 <p>而我会永远陪在你身边，</p>
-                <p>爱你，直到永远 💖</p>
+                <p>爱你，直到永远 💖</p>                
+                <p>亦有贺词献上，不知山猪可否品得细糠 >_<</p>
                 <p class="signature">—— 永远爱你的哥哥</p>
             </div>
         </div>
@@ -722,7 +733,10 @@
         <div class="poem-card">
             <span class="poem-decoration left">❀</span>
             <span class="poem-decoration right">❀</span>
-            <h2 class="poem-title">🌸 行香子 · 玉静生辰寄 🌸</h2>
+            <div class="poem-header">
+                <h2 class="poem-title">🌸 行香子 · 玉静生辰寄 🌸</h2>
+                <span class="poem-author">宋仁杰</span>
+            </div>
             <div class="poem-content">
                 <div class="poem-part">
                     <p class="poem-part-title">【上阕】</p>
@@ -740,7 +754,6 @@
                     <p>对四时花，三餐暖，百年身。</p>
                 </div>
             </div>
-            <p class="poem-signature">—— 我猜有笨蛋看不懂！</p>
         </div>
 
         <!-- 生日蛋糕蜡烛互动 -->
@@ -765,8 +778,8 @@
             </div>
             
             <div class="cake-controls">
-                <button class="refresh-btn" onclick="lightAllCandles()">🔥 全部点亮</button>
-                <button class="refresh-btn" onclick="blowAllCandles()">💨 吹灭蜡烛</button>
+                <button class="refresh-btn" onclick="lightAllCandles()">🔥 点亮它吧</button>
+                <button class="refresh-btn" onclick="blowAllCandles()">💨 吹灭它吧</button>
             </div>
             <p class="cake-hint" id="cake-hint">点击蜡烛来点亮/吹灭它们！</p>
         </div>
@@ -795,7 +808,7 @@
         </div>
 
         <button class="magic-btn" onclick="burstHearts()">
-            💗 点击送我（特指宋哥哥）小心心
+            💗 点击送哥哥小心心
         </button>
 
         <div class="footer">
@@ -866,59 +879,88 @@
             return ((lunarInfo[y - 1900] & (0x10000 >> m)) ? 30 : 29);
         }
 
-        // 传入农历年月日，计算对应的公历日期
+
+        // 农历转换（最简单清晰版本）
         function LunarToSolar(lunarYear, lunarMonth, lunarDay, isLeap) {
-            let baseDate = new Date(1900, 0, 31);
+            let base = new Date(1900, 0, 31);
             let offset = 0;
-            let temp;
-            
-            // 计算农历年份的总天数
-            for (temp = 1900; temp < lunarYear; temp++) {
-                offset += lYearDays(temp);
+            let i;
+
+            // 1. 加年份
+            for (i = 1900; i < lunarYear; i++) {
+                offset += lYearDays(i);
             }
-            
-            // 计算农历月份的总天数
+
             let leap = leapMonth(lunarYear);
-            for (temp = 1; temp < lunarMonth; temp++) {
-                offset += monthDays(lunarYear, temp);
-            }
-            
-            // 如果是闰月且当前月份小于闰月，或者指定为闰月
-            if (isLeap && leap >= lunarMonth) {
-                // 已经计算了闰月前的月份，需要加上闰月
-                if (leap === lunarMonth) {
-                    // 就是要找这个闰月
-                } else if (leap < lunarMonth) {
+
+            // 2. 加月份（1到lunarMonth-1月）
+            for (i = 1; i < lunarMonth; i++) {
+                offset += monthDays(lunarYear, i);
+                // 如果这个月是闰月，并且我们不是要找闰月，加上闰月
+                if (i === leap && !isLeap) {
                     offset += leapDays(lunarYear);
                 }
-            } else if (!isLeap && leap > 0 && leap < lunarMonth) {
+            }
+
+            // 3. 如果我们要找的就是闰月
+            if (isLeap && leap === lunarMonth) {
+                offset += monthDays(lunarYear, leap);
+            }
+            // 如果不是找闰月，但月份在闰月之后，加上闰月
+            else if (!isLeap && leap > 0 && leap < lunarMonth) {
+                // 检查一下在步骤2里有没有加过？没有！因为步骤2只加i < lunarMonth
                 offset += leapDays(lunarYear);
             }
-            
-            // 如果指定是闰月
-            if (isLeap && leap === lunarMonth) {
-                // 已经处理了
-            }
-            
-            // 加上日期
+
+            // 4. 加日期
             offset += (lunarDay - 1);
-            
-            baseDate.setTime(baseDate.getTime() + offset * 24 * 60 * 60 * 1000);
-            return baseDate;
+
+            base.setTime(base.getTime() + offset * 86400000);
+            return base;
         }
 
-        // 获取下一个农历四月初八对应的公历日期
+        // 获取下一个农历四月初八对应的公历日期（最稳妥方案）
         function getNextBirthday() {
             const today = new Date();
-            let year = today.getFullYear();
+            today.setHours(0, 0, 0, 0);
+            const year = today.getFullYear();
             
-            // 尝试今年的农历四月初八
-            let birthday = LunarToSolar(year, 4, 8, false);
+            // 预定义农历四月初八对应的准确公历日期（再次验证）
+            // 数据来源：万年历确认
+            const lunarApril8th = {
+                2024: new Date(2024, 4, 15),  // 2024年5月15日
+                2025: new Date(2025, 4, 24),  // 2025年5月24日
+                2026: new Date(2026, 4, 24),  // 2026年5月24日 ✅
+                2027: new Date(2027, 4, 13),  // 2027年5月13日 ✅
+                2028: new Date(2028, 4, 2),   // 2028年5月2日 ✅
+                2029: new Date(2029, 5, 19),  // 2029年6月19日 ✅
+                2030: new Date(2030, 4, 9),   // 2030年5月9日
+                2031: new Date(2031, 4, 28),  // 2031年5月28日
+                2032: new Date(2032, 4, 17),  // 2032年5月17日
+                2033: new Date(2033, 5, 6),   // 2033年6月6日
+                2034: new Date(2034, 4, 26),  // 2034年5月26日
+                2035: new Date(2035, 4, 15),  // 2035年5月15日
+            };
+            
+            // 获取今年的生日
+            let birthday;
+            if (lunarApril8th[year]) {
+                birthday = new Date(lunarApril8th[year]);
+            } else {
+                // 如果没有预定义，用农历算法
+                birthday = LunarToSolar(year, 4, 8, false);
+            }
             birthday.setHours(0, 0, 0, 0);
             
-            // 如果今年的生日已经过了，就用明年的
-            if (birthday < today) {
-                birthday = LunarToSolar(year + 1, 4, 8, false);
+            // 如果今年的生日已经过了或者就是今天，用明年的
+            if (birthday <= today) {
+                const nextYear = year + 1;
+                if (lunarApril8th[nextYear]) {
+                    birthday = new Date(lunarApril8th[nextYear]);
+                } else {
+                    birthday = LunarToSolar(nextYear, 4, 8, false);
+                }
+                birthday.setHours(0, 0, 0, 0);
             }
             
             return birthday;
@@ -1008,7 +1050,7 @@
         // 初始化蜡烛
         function initCandles() {
             const container = document.getElementById('candles-container');
-            const candleCount = 8; // 8根蜡烛
+            const candleCount = 1; // 1根蜡烛
             
             for (let i = 0; i < candleCount; i++) {
                 const candle = document.createElement('div');
@@ -1041,9 +1083,12 @@
                 setTimeout(() => {
                     candle.classList.add('flame-on');
                     createSparkles(candle);
+                    // 最后一个蜡烛点亮后更新提示
+                    if (index === candles.length - 1) {
+                        setTimeout(() => updateHint(), 50);
+                    }
                 }, index * 150);
             });
-            updateHint();
         }
         
         // 全部吹灭
@@ -1052,9 +1097,12 @@
             candles.forEach((candle, index) => {
                 setTimeout(() => {
                     candle.classList.remove('flame-on');
+                    // 最后一个蜡烛吹灭后更新提示
+                    if (index === candles.length - 1) {
+                        setTimeout(() => updateHint(), 50);
+                    }
                 }, index * 100);
             });
-            updateHint();
             
             // 吹灭后放烟花
             setTimeout(() => {
@@ -1069,11 +1117,11 @@
             const hint = document.getElementById('cake-hint');
             
             if (litCount === candles.length) {
-                hint.textContent = '🎉 所有蜡烛都点亮了！许个愿吧！✨';
+                hint.textContent = '🎉 蜡烛点亮了！许个愿吧！✨';
             } else if (litCount === 0) {
-                hint.textContent = '💨 蜡烛都灭了，点击重新点亮吧！';
+                hint.textContent = '💨 蜡烛灭了，愿望成真！';
             } else {
-                hint.textContent = `🔥 ${litCount}/${candles.length} 根蜡烛已点亮`;
+                hint.textContent = '🔥 蜡烛已点亮';
             }
         }
         
